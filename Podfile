@@ -6,10 +6,15 @@ target 'WeatherApp' do
   use_frameworks!
 
   # Pods for WeatherApp
+  pod 'Moya/RxSwift'
+  pod 'RxDataSources'
+  pod 'MBProgressHUD'
 
   target 'WeatherAppTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
 end
