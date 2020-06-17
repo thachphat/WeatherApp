@@ -15,4 +15,4 @@
 - [ ] Caching mechanism.
 - [ ] Accessibility for Disability Supports:
     - [ ] VoiceOver - the revolutionary screen reader for blind and low vision users
-    - [ ] Scaling Text - Support Large Text Display when adjusting large font size.
+    - [x] Scaling Text - Support Large Text Display when adjusting large font size.
