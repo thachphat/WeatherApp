@@ -15,6 +15,7 @@ import MBProgressHUD
 final class WeatherListViewController: UIViewController {
     private lazy var searchBar = UISearchBar()
     private lazy var tableView = UITableView()
+    private var hud: MBProgressHUD?
 
     private let disposeBag = DisposeBag()
     
@@ -72,10 +73,11 @@ final class WeatherListViewController: UIViewController {
 
         viewModel.isLoading
             .bind { [unowned self] in
-                if $0 {
-                    MBProgressHUD.showAdded(to: self.view, animated: true)
+                if $0 && self.hud == nil {
+                    self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 } else {
-                    MBProgressHUD.hide(for: self.view, animated: true)
+                    self.hud?.hide(animated: true)
+                    self.hud = nil
                 }
         }
         .disposed(by: disposeBag)
