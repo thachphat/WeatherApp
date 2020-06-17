@@ -10,7 +10,7 @@
 
 
 ## Nice to have: 
-- [ ] Acceptance Tests (UIAutomationTest) 
+- [x] Acceptance Tests (UIAutomationTest) 
 - [x] Exception handling for API errors.
 - [ ] Caching mechanism.
 - [ ] Accessibility for Disability Supports:
